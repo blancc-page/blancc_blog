@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+
+<form action="/composeft" method="post" class="compose">
+
+    <h1 style="margin-top:2%; text-align:center;">Featured Post Copmose Page</h1>
+
+    <div class="blog-details">
+       <label for="ftInputUrl">Featured Image</label>
+       <input class="full-width" type="url" placeholder="https://featured-image.com" id="ftInputUrl" name="ftInputUrl" autocomplete="off">
+    </div>
+    <div class="blog-details">
+        <label for="ftInputBlog">Title</label>
+        <input class="full-width" type="text" placeholder="Title of blog" id="ftInputBlog" name="ftInputBlog">
+    </div>
+    <div class="blog-details">
+        <label for="ftInputAuth">Author</label>
+        <input class="full-width" type="text" placeholder="Author's Name" id="ftInputAuth" name="ftInputAuth">
+    </div>
+    <!-- <div class="blog-details">
+        <label for="ftInputDate">Date</label>
+        <input class="full-width" type="date" placeholder="DD/MM/YYYY" id="ftInputDate" name="ftInputDate">
+    </div> -->
+
+    <label for="ftContent">Content</label>
+    <textarea class="full-width" placeholder="Content of blog" id="ftContent" name="ftContent"></textarea>
+<!-- 
+    <label class="add-bottom">
+       <input type="checkbox">			            
+       <span class="label-text">Send a copy to yourself</span>
+    </label>
+   -->
+    <input class="button-primary full-width-on-mobile" type="submit" value="Submit">
+
+</form>
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,37 @@
+<%- include('partials/header'); -%>
+   
+
+   <!-- content
+   ================================================== -->
+   <section id="content-wrap" class="blog-single">
+   	<div class="row">
+   		<div class="col-twelve">
+
+   			<article class="format-standard">  
+
+   				<div class="content-media">
+						<div class="post-thumb">
+							<img src="<%= img %>" alt="yes"> 
+						</div>  
+				</div>
+
+				<div class="primary-content">
+
+					<h1 class="page-title"><%= title %></h1>	
+
+					<ul class="entry-meta">
+						<li class="date"><%= date %></li>						
+						<li class="cat"><a href="">Wordpress</a><a href="">Design</a></li>				
+					</ul>	
+						<p class="lead"><%= content %></p>
+                </div>
+                				
+            </article>
+        </div> <!-- end col-full -->
+    </div> <!-- end row comments -->
+</div> <!-- end comments-wrap -->
+
+   </section> <!-- end content -->
+
+
+   <%- include('partials/footer'); -%>

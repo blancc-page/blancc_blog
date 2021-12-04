@@ -1,0 +1,41 @@
+<%- include('partials/header'); -%>
+
+<h1 style="margin-top:2%; text-align:center;">Edit Standard Post</h1>
+
+<form action="/edit" method="post" class="compose">
+
+    <div class="blog-details">
+        <label for="inputId">Post ID</label>
+        <input class="full-width" type="text" placeholder="61a13b493569d9c1c13a7b84" id="inputId" name="inputId">
+     </div>
+
+    <div class="blog-details">
+       <label for="inputUrl">Featured Image</label>
+       <input class="full-width" type="url" placeholder="https://featured-image.com" id="inputUrl" name="inputUrl" autocomplete="off">
+    </div>
+    <div class="blog-details">
+        <label for="inputBlog">Title</label>
+        <input class="full-width" type="text" placeholder="Title of blog" id="inputBlog" name="inputBlog">
+    </div>
+    <div class="blog-details">
+        <label for="inputAuth">Author</label>
+        <input class="full-width" type="text" placeholder="Author's Name" id="inputAuth" name="inputAuth">
+    </div>
+    <!-- <div class="blog-details">
+        <label for="inputDate">Date</label>
+        <input class="full-width" type="date" placeholder="DD/MM/YYYY" id="inputDate" name="inputDate">
+    </div> -->
+
+    <label for="content">Content</label>
+    <textarea class="full-width" placeholder="Content of blog" id="content" name="content"></textarea>
+<!-- 
+    <label class="add-bottom">
+       <input type="checkbox">			            
+       <span class="label-text">Send a copy to yourself</span>
+    </label>
+   -->
+    <input class="button-primary full-width-on-mobile" type="submit" value="Submit">
+
+</form>
+
+<%- include('partials/footer'); -%>

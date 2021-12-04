@@ -1,0 +1,86 @@
+<%- include('partials/header'); -%>
+
+   <!-- masonry
+   ================================================== -->
+<section id="bricks">
+
+	<div class="row masonry">
+
+	<!-- brick-wrapper -->
+	<div class="bricks-wrapper">
+
+		<div class="grid-sizer"></div>
+		
+			<div class="brick entry featured-grid animate-this">
+
+			  <div class="entry-content">
+				  <div id="featured-post-slider" class="flexslider">
+						<ul class="slides">
+							<%  ftBlogPosts.pop().forEach(function (ftBlogPost) {  %> 
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('<%= ftBlogPost.img %>');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+										<ul class="entry-meta">
+											 <li><%= ftBlogPost.date %></li> 
+											 <li><a href="#" ><%= ftBlogPost.author %></a></li>				
+										 </ul>	
+
+										<h1 class="slide-title"><a href="/ftblogposts/<%= ftBlogPost.id %>" title=""><%= ftBlogPost.title %></a></h1> 
+									</div> 				   					  
+							
+								</div>
+							</li>
+							<%  } );  %>
+						</ul>
+					</div>
+				</div>
+
+			</div> <!-- /slide -->
+		
+					
+										
+		  <%  blogPosts.pop().forEach(function (blogPost) {  %>
+		  <article class="brick entry format-standard animate-this">
+
+			<div class="entry-thumb">
+
+			   <a href="/blogposts/<%= blogPost.id %>" class="thumb-link">
+				   <img src="<%= blogPost.img %>" alt="building">             
+			   </a>
+			</div>
+
+			<div class="entry-text">
+				<div class="entry-header">
+
+					<div class="entry-meta">
+						<span class="cat-links">
+							<a href="#">Design</a> 
+							<a href="#">Photography</a>               				
+						</span>			
+					</div>
+
+					<h1 class="entry-title"><a href="/blogposts/<%= blogPost.id %>"><%= blogPost.title %></a></h1>
+					
+				</div>
+					 <div class="entry-excerpt">
+						<%= _.truncate(blogPost.content, {"length": 103, "omission": '...'}) %>
+					 </div>	 	 
+			</div>
+			
+
+		
+		</article> <!-- end article -->
+	<%  } );  %>
+			
+
+</section> <!-- end bricks -->
+
+
+<%- include('partials/pagination'); -%>
+
+<%- include('partials/footer'); -%>

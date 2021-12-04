@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+<h1 style="margin-top:2%; text-align:center;">Delete Featured Post</h1>
+
+<form action="/deleteft" method="post" class="compose">
+
+    <div class="blog-details">
+        <label for="inputId">Post ID</label>
+        <input class="full-width" type="text" placeholder="Post's ID" id="ftInputId" name="ftInputId" autocomplete="off">
+     </div>
+    <input class="button-primary full-width-on-mobile" type="submit" value="Submit">
+
+</form>
+
+<%- include('partials/footer'); -%>
