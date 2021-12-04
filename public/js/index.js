@@ -14,7 +14,7 @@ const mongoose = require("mongoose");
 
 
 // connect to mongoose 
-mongoose.connect('mongodb+srv://blancc:killa911G@blancccluster.9m6ww.mongodb.net/ablogDB', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://blancc:killa911G@blancccluster.9m6ww.mongodb.net/ablogDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
